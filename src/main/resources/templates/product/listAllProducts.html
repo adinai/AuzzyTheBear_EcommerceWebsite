@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="nav-left d-flex align-items-center">
+        <a href="#" class="d-flex align-items-center me-5" style="outline: none; text-decoration: none">
+          <img src="../images/logo.jpg" alt="logo" style="max-width: 50px; max-height: 50px; border-radius: 9px" class="me-3">
+          <p class="m-0">247Neat</p>
+        </a>
+
+        <form class="position-relative w-100 form-nav">
+          <div class="position-relative w-100 align-items-center" style="height: 40px;">
+            <input class="me-2" placeholder="Search">
+            <button type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <button class="navbar-toggler mt-xs-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><ion-icon name="alert-circle-outline"></ion-icon> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html"><ion-icon name="storefront-outline"></ion-icon> Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"><ion-icon name="people-outline"></ion-icon> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="container">
+    <div class="row"> <!--dropdown for price and size-->
+
+      <div class="col text-end">
+        <h6>Filter</h6>
+        <hr>
+        <div class="btn-group">
+          <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+            From low to high price
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end">
+            <li><button class="dropdown-item" type="button">From small to large size</button></li>
+            <li><button class="dropdown-item" type="button">From low to high rating</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>  <!--dropdown for price and size-->
+    <hr>
+    <br>
+    <div class="row" id="list-products">
+      <!-- <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div> -->
+    </div>  <!--list-products row-->
+    <div class="row" id="binding-product">
+
+    </div>  <!--products row-->
+  </div>  <!--container-->
+</main>
+
+
+<footer>
+
+</footer>
+
+<script>
+        fetch('../json/products.json')
+            .then(response => response.json())
+            .then(data => {
+                var html = '';
+                for(var i = 0; i < data.length; i++){
+                    var product = data[i];
+                    var ratingStarts = '';
+
+                    for(var j = 0; j < data.rating; j++){
+                        ratingStarts += '<span class="fa fa-star checked"></span>'
+                    }
+
+                    html += `
+                        <div class="col-xl-4 col-md-6 col-sm-12 mx-auto">
+                            <div class="p-2"  style="height: 70%">
+                                <img src="${product.image}"  class="img-fluid">
+                                    <div class="information-product">
+                                        <h3>${product.title}</h3>
+                                    <h4>${product.price}</h4>
+                                    ${ratingStarts}
+                                    <div>
+                                      <button type="button" class="btn btn-primary">Add to cart</button>
+                                      <button type="button" class="btn btn-success">Buy now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+                }
+                var container = document.getElementById("list-products");
+                container.innerHTML = html;
+            })
+            .catch(error => {
+                console.error('error while loadin JSON:', error);
+            });
+    </script>
+<!-- <script src="resources/script/productsController.js"></script> -->
+<script type="module" src="../js/product-form.js"></script>
+<!-- <script type="module" src="resources/script/products.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+<!--  Icon -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
