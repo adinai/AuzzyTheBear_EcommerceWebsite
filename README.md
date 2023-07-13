@@ -22,13 +22,15 @@ Testing uses JUnit
 
 # Features
 
-What Admin Role can do?
+What Admin Role can do
+
 Register new account
 Log in and log out
 Add/Edit/Delete products
 Retrieve user list and order list
 
-What User Role can do?
+What User Role can do
+
 Register new account
 Log in and log out
 Add products into cart
