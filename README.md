@@ -11,7 +11,7 @@ Backend: Java Core, Spring Boot, Hibernate, MySQL database
 
 # Functions
 
-## Authentication and Authorization 
+#### Authentication and Authorization 
 
 # CRUD - Create, Read, Delete, Update
 
