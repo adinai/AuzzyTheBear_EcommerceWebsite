@@ -11,13 +11,13 @@ Backend: Java Core, Spring Boot, Hibernate, MySQL database
 
 # Functions
 
-Authentication and Authorization 
+# Authentication and Authorization 
 
-CRUD - Create, Read, Delete, Update
+# CRUD - Create, Read, Delete, Update
 
-Logging
+# Logging
 
-Testing 
+# Testing 
 
 Authentication and Authorization uses Spring Boot Security
 
@@ -29,7 +29,7 @@ Testing uses JUnit
 
 # Features
 
-What Admin Role can do
+# What Admin Role can do
 
 Register new account
 
@@ -39,7 +39,8 @@ Add/Edit/Delete products
 
 Retrieve user list and order list
 
-What User Role can do
+
+# What User Role can do
 
 Register new account
 
