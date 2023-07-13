@@ -1,12 +1,15 @@
-**Auzzy** **The** **Bear**
+# Auzzy The Bear
 
 Auzzy The Bear is an ecommerce website I made for a real business in Los Gatos, California. 
 
-****Tech******Stack**
-Frontend: HTML5, CSS3, Boostrap5, Thymeleaf, Javascript, AJAX, JSON
-Backend: Java Core, Spring Boot, MySQL database
 
-**Functions**
+# Tech Stack
+
+Frontend: HTML5, CSS3, Boostrap5, Thymeleaf, Javascript, AJAX, JSON
+Backend: Java Core, Spring Boot, Hibernate, MySQL database
+
+# Functions
+
 Authentication and Authorization 
 CRUD - Create, Read, Delete, Update
 Logging
@@ -17,7 +20,8 @@ CRUD uses Spring Boot JPA
 Logging uses slf4j
 Testing uses JUnit
 
-**Demo**
+# Demo
+
 What Admin Role can do?
 Register new account
 Log in and log out
