@@ -20,7 +20,7 @@ CRUD uses Spring Boot JPA
 Logging uses slf4j
 Testing uses JUnit
 
-# Demo
+# Features
 
 What Admin Role can do?
 Register new account
