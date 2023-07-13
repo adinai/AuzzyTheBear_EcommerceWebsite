@@ -2,7 +2,7 @@ Auzzy The Bear
 
 Auzzy The Bear is an ecommerce website I made for a real business in Los Gatos, California. 
 
-****Tech******Stack****
+****Tech******Stack**
 Frontend: HTML5, CSS3, Boostrap5, Thymeleaf, Javascript, AJAX, JSON
 Backend: Java Core, Spring Boot, MySQL database
 
