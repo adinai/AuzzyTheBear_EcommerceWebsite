@@ -1,5 +1,5 @@
-Auzzy The Bear
-
+**Auzzy** **The** **Bear**
+/n
 Auzzy The Bear is an ecommerce website I made for a real business in Los Gatos, California. 
 
 ****Tech******Stack**
