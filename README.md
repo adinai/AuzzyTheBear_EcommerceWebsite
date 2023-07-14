@@ -1,3 +1,4 @@
+#NOTE: Please look at the code on the main branch
 # Auzzy The Bear
 
 Auzzy The Bear is an ecommerce website I made for a real business in Los Gatos, California. 
